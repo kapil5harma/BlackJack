@@ -1,6 +1,4 @@
-
-// BlackJack MiniGame
-// Kapil Sharma
+// script.js
 
 let suits = [ 'Hearts', 'Clubs', 'Diamonds', 'Spades'];
 let values = [ 'Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King' ];
@@ -26,25 +24,19 @@ function createDeck() {
     }
     return deck;
 }
-
 function getNextCard() {
     return deck.shift();
 }
-
 function getCardString(card) {
     return card.value + ' of ' + card.suit;
 }
 
 let deck = createDeck();
-
-// deck.forEach(element => {
-//     console.log('element: ', element);
-// });
 let playerCards = [ getNextCard(), getNextCard() ];
 
 console.log('Welcome to BlackJack!');
-
 console.log('You are dealt:');
+
 playerCards.forEach(element => {
     console.log('   ' + getCardString(element));
 });
